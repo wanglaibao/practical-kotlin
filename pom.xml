@@ -107,7 +107,6 @@
                         <configuration>
                             <sourceDirs>
                                 <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
-                                <!--<sourceDir>${project.basedir}/src/main/java</sourceDir>-->
                             </sourceDirs>
                         </configuration>
                     </execution>
@@ -148,7 +147,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
-© 2018 GitHub, Inc.
