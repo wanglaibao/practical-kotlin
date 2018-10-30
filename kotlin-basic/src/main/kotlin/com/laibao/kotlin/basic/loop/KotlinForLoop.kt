@@ -11,8 +11,6 @@ package com.laibao.kotlin.basic.loop
  * using for loop statement, we can loop over any collection that is iterable or any range of elements.
  */
 
-
-
 fun main(args: Array<String>) {
     testForList()
     testForRange()
