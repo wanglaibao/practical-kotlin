@@ -1,4 +1,4 @@
-package com.laibao.kotlin.basic.oop
+package com.laibao.kotlin.basic.oop.classes
 
 /**
  * @author laibao wang
