@@ -10,7 +10,7 @@ import com.laibao.kotlin.basic.oop.abstraction.Vehicle
  */
 
 fun main(args: Array<String>) {
-    var vehicle: Vehicle = Aeroplane()
+    val vehicle: Vehicle = Aeroplane()
     vehicle.accelerate()
     vehicle.run()
     vehicle.sail()
