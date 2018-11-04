@@ -1,4 +1,4 @@
-package com.drong.smart.decision.service
+package com.laibao.smart.decision.service.test
 
 import com.laibao.smart.decision.SmartDecisionSysApplication
 import org.junit.Test
@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner
 
 @RunWith(SpringRunner::class)
 @SpringBootTest(classes = arrayOf(SmartDecisionSysApplication::class))
-class BaseServiceTest {
+class BaseServiceTest{
 
     @Test
     fun contextLoads() {
