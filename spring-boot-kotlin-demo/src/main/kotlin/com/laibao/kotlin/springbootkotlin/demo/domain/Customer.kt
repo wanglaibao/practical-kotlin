@@ -18,5 +18,5 @@ class Customer (val firstName: String,
     /**
      * 添加一个默认的参数为空的构造函数
      */
-    constructor(): this("", "")
+    //constructor(): this("", "")
 }

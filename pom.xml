@@ -12,6 +12,7 @@
         <module>servlet-web-application</module>
         <module>spring-boot-restful</module>
         <module>spring-boot-kotlin-demo</module>
+        <module>smart-decision-system</module>
     </modules>
     <packaging>pom</packaging>
 
