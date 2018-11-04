@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.laibao.kotlin.simple.mybatis.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.laibao.kotlin.simple.mybatis.domain.User">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, `name`
+    </sql>
+
+    <select id="queryAllUser" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from `user`
+    </select>
+
+    <select id="queryUserById"  resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from `user`
+        where id = #{id}
+    </select>
+
+    <insert id="saveUser" parameterType="com.laibao.kotlin.simple.mybatis.domain.User">
+        insert into `user` (`name`)
+        values (#{name,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateUser" parameterType="com.laibao.kotlin.simple.mybatis.domain.User">
+        update user
+        <set>
+            <if test="name != null">
+                `name` = #{name,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteUserById">
+        delete from `user` where id = #{id}
+    </delete>
+</mapper>

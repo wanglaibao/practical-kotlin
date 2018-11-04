@@ -10,4 +10,8 @@ interface UserService {
     fun getUserById(id : Long?): User
 
     fun insertUser(user: User):Unit
+
+    fun modifyUser(user: User):Unit
+
+    fun removeUserById(id: Long?):Unit
 }
