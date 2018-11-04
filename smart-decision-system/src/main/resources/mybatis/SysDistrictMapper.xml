@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.laibao.smart.decision.mapper.SysDistrictMapper">
+  <resultMap id="BaseResultMap" type="com.laibao.smart.decision.domain.SysDistrict">
+    <id column="district_id" jdbcType="VARCHAR" property="districtId" />
+    <id column="city_id" jdbcType="VARCHAR" property="cityId" />
+    <result column="district" jdbcType="VARCHAR" property="district" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List">
+    district_id, city_id, district, state
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="com.laibao.smart.decision.domain.SysDistrict" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_district
+    where district_id = #{districtId,jdbcType=VARCHAR}
+      and city_id = #{cityId,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectByCityId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_district
+    where city_id = #{cityId}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="com.laibao.smart.decision.domain.SysDistrict">
+    delete from sys_district
+    where district_id = #{districtId,jdbcType=VARCHAR}
+      and city_id = #{cityId,jdbcType=VARCHAR}
+  </delete>
+
+  <insert id="insert" parameterType="com.laibao.smart.decision.domain.SysDistrict">
+    insert into sys_district (district_id, city_id, district, 
+      state)
+    values (#{districtId,jdbcType=VARCHAR}, #{cityId,jdbcType=VARCHAR}, #{district,jdbcType=VARCHAR}, 
+      #{state,jdbcType=TINYINT})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.laibao.smart.decision.domain.SysDistrict">
+    insert into sys_district
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="districtId != null">
+        district_id,
+      </if>
+      <if test="cityId != null">
+        city_id,
+      </if>
+      <if test="district != null">
+        district,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="districtId != null">
+        #{districtId,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null">
+        #{cityId,jdbcType=VARCHAR},
+      </if>
+      <if test="district != null">
+        #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.laibao.smart.decision.domain.SysDistrict">
+    update sys_district
+    <set>
+      <if test="district != null">
+        district = #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=TINYINT},
+      </if>
+    </set>
+    where district_id = #{districtId,jdbcType=VARCHAR}
+      and city_id = #{cityId,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateByPrimaryKey" parameterType="com.laibao.smart.decision.domain.SysDistrict">
+    update sys_district
+    set district = #{district,jdbcType=VARCHAR},
+      state = #{state,jdbcType=TINYINT}
+    where district_id = #{districtId,jdbcType=VARCHAR}
+      and city_id = #{cityId,jdbcType=VARCHAR}
+  </update>
+</mapper>
