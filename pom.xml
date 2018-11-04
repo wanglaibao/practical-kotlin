@@ -13,6 +13,8 @@
         <module>spring-boot-restful</module>
         <module>spring-boot-kotlin-demo</module>
         <module>smart-decision-system</module>
+        <module>reactive-in-kotlin</module>
+        <module>simple-kotlin-mybatis</module>
     </modules>
     <packaging>pom</packaging>
 
