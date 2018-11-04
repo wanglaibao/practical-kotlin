@@ -2,9 +2,9 @@ package com.laibao.smart.decision.domain
 
 import java.io.Serializable
 
-data class SysDistrict (val districtId: String,
-                         val cityId: String,
-                         val district: String,
-                         val state: Byte): Serializable {
+data class SysDistrict (var districtId: String? = null,
+                         var cityId: String? = null,
+                         var district: String? = null,
+                         var state: Byte? = null): Serializable {
 
 }
