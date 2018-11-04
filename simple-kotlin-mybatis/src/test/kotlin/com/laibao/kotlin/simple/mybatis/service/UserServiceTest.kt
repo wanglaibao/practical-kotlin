@@ -25,4 +25,11 @@ class UserServiceTest:BaseServiceTest() {
         val users:List<User> = userService.getAllUser()
         println(JSON.toJSONString(users))
     }
+
+    @Test
+    fun testInsertUser() {
+        val user: User = User(name = "阿里巴巴")
+        userService.insertUser(user)
+    }
+
 }
