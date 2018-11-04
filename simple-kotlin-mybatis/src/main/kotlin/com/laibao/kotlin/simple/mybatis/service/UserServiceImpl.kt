@@ -16,7 +16,7 @@ class UserServiceImpl(private val userMapper: UserMapper) :UserService{
     override fun getUserById(id: Long?): User = userMapper.queryUserById(id)
 
 
-    override fun insertUser(user: User) {
+    override fun insertUser(user: User):Unit {
         userMapper.saveUser(user)
     }
 }
