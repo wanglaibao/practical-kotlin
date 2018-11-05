@@ -7,4 +7,6 @@ interface SysCityService {
     fun selectByProvinceId(provinceId: String): List<SysCity>
 
     fun selectByPrimaryKey(key: SysCity): SysCity
+
+    fun selectAllCities(): List<SysCity>
 }

@@ -1,4 +1,4 @@
-package com.drong.smart.decision.service.impl
+package com.laibao.smart.decision.service.impl
 
 import com.laibao.smart.decision.domain.SysCity
 import com.laibao.smart.decision.mapper.SysCityMapper
@@ -14,5 +14,9 @@ class SysCityServiceImpl (val sysCityMapper: SysCityMapper): SysCityService {
 
     override fun selectByPrimaryKey(key: SysCity): SysCity {
         return sysCityMapper.selectByPrimaryKey(key)
+    }
+
+    override fun selectAllCities(): List<SysCity> {
+        return sysCityMapper.selectAllCities()
     }
 }

@@ -13,6 +13,12 @@
     city_id, province_id, city, state
   </sql>
 
+  <select id="selectAllCities" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_city
+  </select>
+
   <select id="selectByPrimaryKey" parameterType="com.laibao.smart.decision.domain.SysCity" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

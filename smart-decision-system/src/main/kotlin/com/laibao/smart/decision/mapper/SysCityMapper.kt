@@ -19,4 +19,6 @@ interface SysCityMapper {
     fun updateByPrimaryKeySelective(record: SysCity): Int
 
     fun updateByPrimaryKey(record: SysCity): Int
+
+    fun selectAllCities(): List<SysCity>
 }
