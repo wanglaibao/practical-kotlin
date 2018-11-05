@@ -25,6 +25,24 @@
         <commons-collections.version>3.2.1</commons-collections.version>
     </properties>
 
+    <developers>
+        <developer>
+            <id>wanglaibao</id>
+            <name>小宝在杭州</name>
+            <email>1131751437@qq.com</email>
+            <url>https://github.com/wanglaibao</url>
+            <roles>
+                <role>Coder</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:wanglaibao/simple-kotlin-mybatis.git</connection>
+        <developerConnection>scm:git:git@github.com:wanglaibao/simple-kotlin-mybatis.git</developerConnection>
+        <url>https://github.com/wanglaibao/simple-kotlin-mybatis</url>
+    </scm>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
