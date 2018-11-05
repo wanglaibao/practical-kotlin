@@ -14,6 +14,24 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <developers>
+        <developer>
+            <id>wanglaibao</id>
+            <name>小宝在杭州</name>
+            <email>1131751437@qq.com</email>
+            <url>https://github.com/wanglaibao</url>
+            <roles>
+                <role>Coder</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:wanglaibao/spring-boot-kotlin-demo.git</connection>
+        <developerConnection>scm:git:git@github.com:wanglaibao/spring-boot-kotlin-demo.git</developerConnection>
+        <url>https://github.com/wanglaibao/spring-boot-kotlin-demo</url>
+    </scm>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
