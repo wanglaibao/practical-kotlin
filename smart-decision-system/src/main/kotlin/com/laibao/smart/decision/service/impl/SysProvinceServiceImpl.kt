@@ -1,4 +1,4 @@
-package com.drong.smart.decision.service.impl
+package com.laibao.smart.decision.service.impl
 
 import com.laibao.smart.decision.domain.SysProvince
 import com.laibao.smart.decision.mapper.SysProvinceMapper
@@ -12,4 +12,7 @@ class SysProvinceServiceImpl (val sysProvinceMapper: SysProvinceMapper): SysProv
         return sysProvinceMapper.selectByPrimaryKey(provinceId)
     }
 
+    override fun selectAllProvince(): List<SysProvince> {
+        return sysProvinceMapper.selectAllProvince()
+    }
 }
