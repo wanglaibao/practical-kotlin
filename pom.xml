@@ -15,6 +15,7 @@
         <module>smart-decision-system</module>
         <module>reactive-in-kotlin</module>
         <module>simple-kotlin-mybatis</module>
+        <module>simple-kotlin-jpa</module>
     </modules>
     <packaging>pom</packaging>
 
