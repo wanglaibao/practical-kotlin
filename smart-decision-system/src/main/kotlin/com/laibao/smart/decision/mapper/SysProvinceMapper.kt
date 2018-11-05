@@ -16,4 +16,6 @@ interface SysProvinceMapper {
     fun updateByPrimaryKeySelective(record: SysProvince): Int
 
     fun updateByPrimaryKey(record: SysProvince): Int
+
+    fun selectAllProvince(): List<SysProvince>
 }

@@ -17,6 +17,12 @@
     where province_id = #{provinceId,jdbcType=VARCHAR}
   </select>
 
+  <select id="selectAllProvince" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_province
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from sys_province
     where province_id = #{provinceId,jdbcType=VARCHAR}
