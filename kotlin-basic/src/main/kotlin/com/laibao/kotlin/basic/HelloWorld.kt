@@ -10,6 +10,8 @@ fun main(args: Array<String>) {
     println("Hello World !")
     println(SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Date()))
     testIfConditions()
+    println()
+    testIfExpress()
 }
 
 fun testIfConditions() {
@@ -23,4 +25,11 @@ fun testIfConditions() {
     } else{
         println("少年人")
     }
+}
+
+fun testIfExpress() {
+    var age = 20
+    //将if表达式赋值给str变量
+    var str = if (age > 20) "age 大于 20" else if (age < 20) "age小于20" else "等于20"
+    println(str)
 }
