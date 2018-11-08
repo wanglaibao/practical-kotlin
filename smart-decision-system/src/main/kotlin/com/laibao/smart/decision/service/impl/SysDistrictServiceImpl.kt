@@ -1,4 +1,4 @@
-package com.drong.smart.decision.service.impl
+package com.laibao.smart.decision.service.impl
 
 import com.laibao.smart.decision.domain.SysDistrict
 import com.laibao.smart.decision.mapper.SysDistrictMapper
