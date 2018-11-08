@@ -24,6 +24,9 @@ fun main(args: Array<String>) {
     println("------------------------")
     println()
     invokeSafeLy()
+    println()
+    println()
+    testLet()
 }
 
 fun invokeSafeLy() {
@@ -31,4 +34,18 @@ fun invokeSafeLy() {
     println(strValue?.length)
     strValue = null
     println(strValue?.length)
+}
+
+fun testLet() {
+    //定义一个元索可空的数组
+    val myArr : Array<String?> = arrayOf ("java","kotlin",null,"groovy", "scala")
+    for (element in myArr) {
+        element?.let { println(element) }
+    }
+
+    var str: String? = "sadfasdf"
+    println(str?.length)
+
+    str?.forEach { element -> println(element) }
+
 }
