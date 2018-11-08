@@ -12,6 +12,7 @@ fun main(args: Array<String>) {
     testIfConditions()
     println()
     testIfExpress()
+    testWhenExpress()
 }
 
 fun testIfConditions() {
@@ -32,4 +33,16 @@ fun testIfExpress() {
     //将if表达式赋值给str变量
     var str = if (age > 20) "age 大于 20" else if (age < 20) "age小于20" else "等于20"
     println(str)
+}
+
+fun testWhenExpress() {
+    val score = 'B'
+    when(score){
+        'A' -> println("优秀")
+        'B' -> println("良好")
+        'C' -> println("中等")
+        'D' -> println("一般")
+        'E' -> println("及格")
+        else -> println("不合格")
+    }
 }
