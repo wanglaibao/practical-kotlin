@@ -19,4 +19,16 @@ fun main(args: Array<String>) {
     }else {
         println("空字符串")
     }
+
+    println("------------------------")
+    println("------------------------")
+    println()
+    invokeSafeLy()
+}
+
+fun invokeSafeLy() {
+    var strValue: String? = "asfdasfdasfdasfdasfasf"
+    println(strValue?.length)
+    strValue = null
+    println(strValue?.length)
 }
