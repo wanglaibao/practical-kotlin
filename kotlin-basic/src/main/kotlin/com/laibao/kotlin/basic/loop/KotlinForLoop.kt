@@ -15,6 +15,17 @@ fun main(args: Array<String>) {
     testForList()
     testForRange()
     testWithIndex()
+    println()
+
+    val items = listOf("apple", "banana", "kiwifruit")
+    for (item in items) {
+        println(item)
+    }
+    println()
+    for (index in items.indices) {
+        println("item at $index is ${items[index]}")
+        println("item index is $index and value is ${items[index]}")
+    }
 }
 
 /**
