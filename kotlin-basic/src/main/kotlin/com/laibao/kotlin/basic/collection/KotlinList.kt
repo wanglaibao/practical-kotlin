@@ -18,6 +18,27 @@ fun main(args: Array<String>) {
     testMap()
     testContains()
     testFind()
+
+
+
+    val items: List<String> = listOf<String>("Example", "Program", "Tutorial","fsafd","ytrtyrty","fhfhdfgh","orange","apple")
+
+    for (item in items) {
+        println(item)
+    }
+
+
+    val fruits = listOf("banana", "avocado", "apple", "kiwifruit","orange")
+    fruits.filter { it.startsWith("a") }
+            .sortedBy { it }
+            .map { it.toUpperCase() }
+            .forEach { println(it) }
+
+    when {
+        "orange" in items -> println("juicy")
+        "apple" in items -> println("apple is fine too")
+    }
+
 }
 
 
