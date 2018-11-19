@@ -20,6 +20,27 @@ fun main(args: Array<String>) {
     printlnMultiplyResultTwo("10", "200")
 
     printlnMultiplyResultTwo("sad1000", "sadf2000")
+
+
+    // Traditional usage
+    var max = 0
+    val a = 10
+    val b = 20
+    if (a < b) max = b  // 这里的 if 是赋值语句而不是表达式语句
+    println("max == $max")
+
+    // With else
+    var min: Int
+    if (a > b) {
+        min = b
+    } else {
+        min = a
+    }
+    println("min == $min")
+
+    // As expression
+    min = if (a > b) a else b
+    println("the min value is $min")
 }
 
 fun maxOf(a: Int, b: Int): Int {
