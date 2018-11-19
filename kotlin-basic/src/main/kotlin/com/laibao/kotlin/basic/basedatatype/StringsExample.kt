@@ -5,8 +5,8 @@ package com.laibao.kotlin.basic.basedatatype
  */
 
 fun main(args: Array<String>) {
-    val s = "Hello, world!\n"
-    println(s)
+    val str = "Hello, world!\n"
+    println(str)
     val text = """for (c in "foo")print(c)"""
     println(text)
     println()
@@ -37,4 +37,13 @@ fun main(args: Array<String>) {
                         |(Benjamin Franklin)
                 """.trimMargin()
     println(text4)
+
+
+    val i = 10
+    // prints "i = 10"
+    println("i = $i")
+
+    val abc = "abc"
+    // prints "abc.length is 3"
+    println("$abc.length is ${abc.length}")
 }
