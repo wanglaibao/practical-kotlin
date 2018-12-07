@@ -8,6 +8,32 @@ package com.laibao.kotlin.basic.loop
 
 fun main(args: Array<String>) {
     testForEach()
+
+    for (i in 1..3) {
+        println(i)
+    }
+    for (i in 6 downTo 0 step 2) {
+        println(i)
+    }
+
+
+
+    val array = intArrayOf(1,2,3,4,5,6,7,8,9,10)
+
+    val numberArr = IntArray(100,{i ->  i})
+
+    for (i in array.indices) {
+        println(array[i])
+    }
+    println()
+    for (i in numberArr.indices) {
+        println(numberArr[i])
+    }
+
+    // Alternatively, you can use the withIndex library function
+    for ((index, value) in numberArr.withIndex()) {
+        println("the element at $index is $value")
+    }
 }
 
 fun testForEach():Unit {
