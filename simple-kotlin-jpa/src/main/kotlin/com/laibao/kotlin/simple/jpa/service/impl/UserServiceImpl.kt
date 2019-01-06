@@ -15,38 +15,39 @@ class UserServiceImpl: UserService {
     @Autowired
     val userRepository: UserRepository? = null
 
-    override fun findByLastName(lastName: String): List<User>? = userRepository?.findByLastName(lastName)
+    override fun findByLastName(lastName: String): List<User>? = null//userRepository?.findByLastName(lastName)
 
     override fun <S : User?> save(entity: S): S? {
-        return userRepository?.save(entity)
+        return null//userRepository?.save(entity)
     }
 
     override fun <S : User?> save(entities: MutableIterable<S>?): MutableIterable<S>? {
-        return userRepository?.saveAll(entities)
+        return null//userRepository?.saveAll(entities)
     }
 
     override fun delete(entities: MutableIterable<User>?) {
-        userRepository?.deleteAll(entities)
+        //userRepository?.deleteAll(entities)
     }
 
     override fun delete(entity: User?) {
-        userRepository?.delete(entity)
+        //userRepository?.delete(entity)
     }
 
     override fun delete(id: Long?) {
-        userRepository?.deleteById(id)
+        //userRepository?.deleteById(id)
     }
 
-    override fun findAll(ids: MutableIterable<Long>?): MutableIterable<User>? =  userRepository?.findAllById(ids)
+    override fun findAll(ids: MutableIterable<Long>?): MutableIterable<User>? =  null//userRepository?.findAllById(ids)
 
-    override fun findAll(): MutableIterable<User>? = userRepository?.findAll()
+    override fun findAll(): MutableIterable<User>? = null//userRepository?.findAll()
 
 
     override fun exists(id: Long?): Boolean? {
-        return userRepository?.existsById(id)
+        //return userRepository.existsById(id)
+        return false
     }
 
     override fun deleteAll() {
-        userRepository?.deleteAll()
+        //userRepository?.deleteAll()
     }
 }
