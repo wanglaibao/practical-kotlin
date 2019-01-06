@@ -19,12 +19,31 @@
     </modules>
     <packaging>pom</packaging>
 
+    <developers>
+        <developer>
+            <id>wanglaibao</id>
+            <name>小宝在杭州</name>
+            <email>1131751437@qq.com</email>
+            <url>https://github.com/wanglaibao</url>
+            <roles>
+                <role>Coder</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:wanglaibao/practical-kotlin.git</connection>
+        <developerConnection>scm:git:git@github.com:wanglaibao/practical-kotlin.git</developerConnection>
+        <url>https://github.com/wanglaibao/practical-kotlin</url>
+    </scm>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <!--<kotlin.version>1.2.71</kotlin.version>-->
         <!--<kotlin.version>1.3.0</kotlin.version>-->
-        <kotlin.version>1.3.10</kotlin.version>
+        <!--<kotlin.version>1.3.10</kotlin.version>-->
+        <kotlin.version>1.3.11</kotlin.version>
         <!--<kotlinx.coroutines.version>1.0.0</kotlinx.coroutines.version>-->
         <kotlinx.coroutines.version>1.0.1</kotlinx.coroutines.version>
         <junit.version>4.12</junit.version>
