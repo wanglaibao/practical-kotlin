@@ -16,6 +16,7 @@
         <module>reactive-in-kotlin</module>
         <module>simple-kotlin-mybatis</module>
         <module>simple-kotlin-jpa</module>
+        <module>kotlin-collection-unleashed</module>
     </modules>
     <packaging>pom</packaging>
 
