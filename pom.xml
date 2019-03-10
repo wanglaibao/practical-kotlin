@@ -18,6 +18,8 @@
         <module>simple-kotlin-jpa</module>
         <module>kotlin-collection-unleashed</module>
         <module>designpattern-in-kotlin</module>
+        <module>oop-in-kotlin</module>
+        <module>fp-in-kotlin</module>
     </modules>
     <packaging>pom</packaging>
 
