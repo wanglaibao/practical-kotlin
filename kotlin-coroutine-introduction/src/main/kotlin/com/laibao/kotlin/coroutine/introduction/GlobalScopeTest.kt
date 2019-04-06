@@ -5,6 +5,13 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 
+
+/**
+ * blocking 和 non-blocking 函数
+ *
+ * delay{} 是 非阻塞函数，Thread.sleep() 则是阻塞函数，coroutines 中使用 runBlocking{} 作为阻塞函数
+ */
+
 fun main() {
 
     println("主线程开始啦")
