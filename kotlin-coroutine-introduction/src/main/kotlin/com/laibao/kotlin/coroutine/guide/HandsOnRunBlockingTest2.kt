@@ -6,6 +6,8 @@ import kotlinx.coroutines.runBlocking
 
 /**
  * Structured Concurrency
+ *
+ * This output tells us that runBlocking does not complete before its child coroutine started by launch finishes its work
  */
 
 fun main() {
