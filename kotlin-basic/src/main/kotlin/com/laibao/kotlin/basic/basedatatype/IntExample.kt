@@ -20,4 +20,15 @@ fun main(args: Array<String>) {
     // On the other hand, the boxing of numbers preserve equality
     // Prints 'true'
     println(boxedA == anotherBoxedA)
+
+
+    val maxDoubleValue = Double.MAX_VALUE
+    val minDoubleValue = -Double.MIN_VALUE
+
+    println(maxDoubleValue)
+    println(minDoubleValue)
+    val maxFloatValue = Float.MAX_VALUE
+    val minFloatValue = -Float.MIN_VALUE
+    println(maxFloatValue)
+    println(minFloatValue)
 }
