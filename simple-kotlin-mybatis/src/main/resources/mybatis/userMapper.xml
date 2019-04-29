@@ -4,11 +4,11 @@
 <mapper namespace="com.laibao.kotlin.simple.mybatis.mapper.UserMapper">
     <resultMap id="BaseResultMap" type="com.laibao.kotlin.simple.mybatis.domain.User">
         <id column="id" jdbcType="BIGINT" property="id" />
-        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="first_name" jdbcType="VARCHAR" property="name" />
     </resultMap>
 
     <sql id="Base_Column_List">
-        id, `name`
+        id, `first_name`
     </sql>
 
     <select id="queryAllUser" resultMap="BaseResultMap">
@@ -25,15 +25,15 @@
     </select>
 
     <insert id="saveUser" parameterType="com.laibao.kotlin.simple.mybatis.domain.User">
-        insert into `user` (`name`)
-        values (#{name,jdbcType=VARCHAR})
+        insert into `user` (`id`,`first_name`)
+        values (#{id},#{name,jdbcType=VARCHAR})
     </insert>
 
     <update id="updateUser" parameterType="com.laibao.kotlin.simple.mybatis.domain.User">
         update user
         <set>
             <if test="name != null">
-                `name` = #{name,jdbcType=VARCHAR},
+                `first_name` = #{name,jdbcType=VARCHAR},
             </if>
         </set>
         where id = #{id}
