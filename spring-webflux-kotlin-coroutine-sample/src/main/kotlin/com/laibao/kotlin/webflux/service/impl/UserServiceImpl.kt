@@ -1,8 +1,8 @@
-package com.laibao.kotlin.simple.mybatis.service.impl
+package com.laibao.kotlin.webflux.service.impl
 
-import com.laibao.kotlin.simple.mybatis.service.UserService
 import com.laibao.kotlin.webflux.UserMapper
 import com.laibao.kotlin.webflux.domain.User
+import com.laibao.kotlin.webflux.service.UserService
 import org.springframework.stereotype.Service
 
 /**

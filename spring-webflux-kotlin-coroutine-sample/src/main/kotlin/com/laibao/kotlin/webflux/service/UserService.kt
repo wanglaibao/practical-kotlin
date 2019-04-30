@@ -1,4 +1,4 @@
-package com.laibao.kotlin.simple.mybatis.service
+package com.laibao.kotlin.webflux.service
 
 import com.laibao.kotlin.webflux.domain.User
 
