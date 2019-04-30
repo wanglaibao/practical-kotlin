@@ -9,11 +9,13 @@ import reactor.core.publisher.Flux
 import kotlinx.coroutines.Dispatchers.Unconfined
 import kotlinx.coroutines.reactor.mono
 import reactor.core.publisher.Mono
-import reactor.core.publisher.toFlux
 
 /**
  * @author laibao wang
  *
+ * spring-webflux-kotlin-coroutine-sample : https://github.com/jkratz55/spring-webflux-kotlin-coroutine-sample
+ *
+ * kotlin-coroutines-examples : https://github.com/Kotlin/kotlin-coroutines-examples
  *
  * In a Spring Boot WebFlux application we have a number of endpoints (REST and GraphQL) which return a Mono or Flux of something.
  *
