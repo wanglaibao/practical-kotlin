@@ -1,6 +1,6 @@
 package com.laibao.kotlin.webflux.service.impl
 
-import com.laibao.kotlin.webflux.UserMapper
+import com.laibao.kotlin.webflux.mapper.UserMapper
 import com.laibao.kotlin.webflux.domain.User
 import com.laibao.kotlin.webflux.service.UserService
 import org.springframework.stereotype.Service

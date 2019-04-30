@@ -1,4 +1,4 @@
-package com.laibao.kotlin.webflux
+package com.laibao.kotlin.webflux.mapper
 
 import com.laibao.kotlin.webflux.domain.User
 import org.apache.ibatis.annotations.*
