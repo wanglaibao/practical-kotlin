@@ -21,6 +21,7 @@
         <module>oop-in-kotlin</module>
         <module>fp-in-kotlin</module>
         <module>kotlin-coroutine-introduction</module>
+        <module>spring-webflux-kotlin-coroutine-sample</module>
     </modules>
     <packaging>pom</packaging>
 
