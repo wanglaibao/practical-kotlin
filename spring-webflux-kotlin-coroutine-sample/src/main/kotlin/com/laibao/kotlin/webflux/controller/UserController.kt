@@ -66,14 +66,11 @@ class UserController (val userService: UserService){
     }
 
     @GetMapping("/user/{id}")
-    fun getUserById(@PathVariable id : Long) : User = runBlocking{
-
-        async{
-            //测试通过了
-            val user:User = userService.getUserById(id)
-            //return user
-            user
-        }.await()
+    fun getUserById(@PathVariable id : Long) : Mono<User> = CoroutineScope(Unconfined).mono{
+        val user:Deferred<User> = async {
+            userService.getUserById(id)
+        }
+        user.await()
     }
 
     @PostMapping("/user")
