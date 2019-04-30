@@ -9,6 +9,7 @@ import reactor.core.publisher.Flux
 import kotlinx.coroutines.Dispatchers.Unconfined
 import kotlinx.coroutines.reactor.mono
 import reactor.core.publisher.Mono
+import reactor.core.publisher.toFlux
 
 /**
  * @author laibao wang
@@ -43,7 +44,7 @@ class UserController (val userService: UserService){
     // can not used this way, but now 2019-04-30, I still know the reason why
     //lateinit var userService: UserService
 
-    @GetMapping("/all")
+    @GetMapping("/all",produces = ["application/stream+json"])
     fun getAllUser() : Mono<List<User>> = CoroutineScope(Unconfined).mono{
 
         val list:Deferred<List<User>> = async {
@@ -53,16 +54,11 @@ class UserController (val userService: UserService){
         list.await()
     }
 
-    @GetMapping("/allUsers")
+    @GetMapping("/allUsers",produces = ["application/stream+json"])
     fun getAllUsers() : Flux<User> = CoroutineScope(Unconfined).flux{
-
-        val list:Deferred<List<User>> = async {
-            userService.getAllUser()
-        }
-
-        val usersList = list.await()
-
-        usersList
+        val usersList = userService.getAllUser()
+        //val usersList = list.await()
+        Flux.fromIterable(usersList)
     }
 
     @GetMapping("/user/{id}")
