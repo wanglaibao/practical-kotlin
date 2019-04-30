@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service
 @Service("userService")
 class UserServiceImpl(private val userMapper: UserMapper) : UserService {
 
-    override fun getAllUser(): List<User> = userMapper.queryAllUser()
+     override suspend fun getAllUser(): List<User> = userMapper.queryAllUser()
 
 
-    override fun getUserById(id: Long?): User = userMapper.queryUserById(id)
+     override suspend fun getUserById(id: Long?): User = userMapper.queryUserById(id)
 
 
     override fun insertUser(user: User):Unit {

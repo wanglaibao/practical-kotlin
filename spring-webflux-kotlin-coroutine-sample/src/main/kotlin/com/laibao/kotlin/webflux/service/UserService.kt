@@ -6,9 +6,9 @@ import com.laibao.kotlin.webflux.domain.User
  * @author laibao wang
  */
 interface UserService {
-    fun getAllUser(): List<User>
+    suspend fun getAllUser(): List<User>
 
-    fun getUserById(id : Long?): User
+    suspend fun getUserById(id : Long?): User
 
     fun insertUser(user: User):Unit
 

@@ -44,7 +44,7 @@ class ReactiveController {
 
 
     @GetMapping("/reactive/allUsers",produces = ["application/stream+json"])
-    fun getReactiveAllUsers() : Flux<User>{
+    suspend fun getReactiveAllUsers() : Flux<User>{
        return Flux.fromIterable(userService.getAllUser())
     }
 
