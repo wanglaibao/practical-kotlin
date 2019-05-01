@@ -4,7 +4,12 @@ import com.laibao.smart.decision.domain.SysProvince
 
 interface SysProvinceService {
 
-    fun selectByPrimaryKey(provinceId: String): SysProvince
+    suspend fun selectByPrimaryKey(provinceId: String): SysProvince
 
-    fun selectAllProvince():List<SysProvince>
+    suspend fun selectAllProvince():List<SysProvince>
+
+
+    fun selectByPrimaryKeyNoSuspend(provinceId: String): SysProvince
+
+    fun selectAllProvinceNoSuspend():List<SysProvince>
 }

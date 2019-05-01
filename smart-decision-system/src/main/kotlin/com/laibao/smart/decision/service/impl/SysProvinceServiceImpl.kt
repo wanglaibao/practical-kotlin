@@ -8,11 +8,19 @@ import org.springframework.stereotype.Service
 @Service("sysProvinceService")
 class SysProvinceServiceImpl (val sysProvinceMapper: SysProvinceMapper): SysProvinceService {
 
-    override fun selectByPrimaryKey(provinceId: String): SysProvince {
+    override suspend fun selectByPrimaryKey(provinceId: String): SysProvince {
         return sysProvinceMapper.selectByPrimaryKey(provinceId)
     }
 
-    override fun selectAllProvince(): List<SysProvince> {
+    override suspend fun selectAllProvince(): List<SysProvince> {
+        return sysProvinceMapper.selectAllProvince()
+    }
+
+    override fun selectByPrimaryKeyNoSuspend(provinceId: String): SysProvince {
+        return sysProvinceMapper.selectByPrimaryKey(provinceId)
+    }
+
+    override fun selectAllProvinceNoSuspend(): List<SysProvince> {
         return sysProvinceMapper.selectAllProvince()
     }
 }

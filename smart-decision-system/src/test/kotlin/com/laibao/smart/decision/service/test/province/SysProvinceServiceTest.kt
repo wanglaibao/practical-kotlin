@@ -17,14 +17,14 @@ class SysProvinceServiceTest: BaseServiceTest() {
 
     @Test
     fun testSelectAllProvince() {
-        val list:List<SysProvince> = sysProvinceService.selectAllProvince()
+        val list:List<SysProvince> = sysProvinceService.selectAllProvinceNoSuspend()
         println(JSON.toJSONString(list))
     }
 
     @Test
     fun testSelectByPrimaryKey() {
         val provinceId: String = "120000"
-        val sysProvince:SysProvince = sysProvinceService.selectByPrimaryKey(provinceId)
+        val sysProvince:SysProvince = sysProvinceService.selectByPrimaryKeyNoSuspend(provinceId)
         println(JSON.toJSONString(sysProvince))
     }
 }

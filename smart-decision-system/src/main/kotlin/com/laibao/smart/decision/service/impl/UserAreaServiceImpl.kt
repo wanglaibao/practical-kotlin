@@ -54,7 +54,7 @@ class UserAreaServiceImpl (val userAreaMapper: UserAreaMapper): UserAreaService 
      * @param districtId
      * @return SysProvinceVO
      */
-    fun getAreaByProvinceIdAndCityIdAndDistrictId(provinceId: String, cityId: String, districtId: String): SysProvinceVO {
+    suspend fun getAreaByProvinceIdAndCityIdAndDistrictId(provinceId: String, cityId: String, districtId: String): SysProvinceVO {
         val provinceVO = SysProvinceVO()
         val sysProvince = sysProvinceService.selectByPrimaryKey(provinceId)
         //provinceVO.setId(sysProvince.getProvinceId())
